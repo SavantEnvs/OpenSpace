@@ -1,0 +1,8 @@
+project: savantenvs/OpenSpace
+target: fuzz_dataset_cache
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_dataset_cache
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar

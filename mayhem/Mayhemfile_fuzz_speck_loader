@@ -1,0 +1,9 @@
+project: savantenvs/OpenSpace
+target: fuzz_speck_loader
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_speck_loader
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_speck_loader/testsuite

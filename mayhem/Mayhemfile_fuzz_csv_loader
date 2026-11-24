@@ -1,0 +1,9 @@
+project: savantenvs/OpenSpace
+target: fuzz_csv_loader
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_csv_loader
+    libfuzzer: true
+    timeout: 5
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_csv_loader/testsuite
